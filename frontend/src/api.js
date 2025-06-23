@@ -1,5 +1,6 @@
 
-const BASE_URL = 'http://localhost:8080'
+// const BASE_URL = 'http://localhost:8080'
+const BASE_URL = import.meta.env.VITE_REACT_APP_BACKEND_BASEURL
 
 export const GetAllEmployees = async (search = '', page = 1, limit = 5) => {
     const url = `${BASE_URL}/api/employees?search=${search}&page=${page}&limit=${limit}`;
